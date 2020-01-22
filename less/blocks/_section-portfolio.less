@@ -1,0 +1,139 @@
+.section-portfolio {
+    padding: 50px 0 95px;
+    background-color: #f4f8f9;
+    overflow: hidden;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        padding: 70px 0 75px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding: 110px 0 125px;
+    }
+}
+
+.section-portfolio__title-wrapper {
+    margin-bottom: 40px;
+
+    //Медиа запрос для 480px
+    @media (min-width: 480px) {
+        width: 555px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        width: auto;
+        margin-bottom: 50px;
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 60px;
+    }
+}
+
+.section-portfolio__filter {
+    display: none;
+    
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+
+    }
+}
+
+.section-portfolio__filter-link {
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        display: block;
+        font-family: 'M PLUS 1p', sans-serif;
+        font-size: 24px;
+        color: rgb(143, 165, 174);
+        line-height: 1.2;
+        font-weight: 800;
+        text-decoration: none;
+        margin-right: 50px;
+        transition: 0.2s;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 28px;
+        margin-right: 80px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover, &:active {
+        color: #ed574f;
+    }
+
+}
+
+.section-portfolio__filter-link.section-portfolio__filter-link--active {
+    color: rgb(0, 0, 0);
+    cursor: default;
+}
+
+.section-portfolio__link-wrapper {
+    max-width: 555px;
+
+    //Медиа запрос для 480px
+    @media (min-width: 480px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-left: unset;
+        margin-right: unset;
+    }
+}
+
+.section-portfolio__link {
+    position: relative;
+    font-size: 20px;
+    font-family: 'M PLUS 1p', sans-serif;
+    color: rgb(3, 155, 229);
+    line-height: 1.2;    
+    text-decoration: none;
+    border-bottom: 1px solid rgb(3, 155, 229);
+
+    &:hover {
+        color: #ea655f;
+        border-bottom: 1px solid #ea655f;    
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+// ------------------- inner-page -------------------
+
+.section-portfolio--inner-page {
+    padding: 0;
+    padding-bottom: 85px;
+    background-color: #f4f8f9;
+}
+
+.section-portfolio__title-wrapper--inner-page {
+    text-align: center;
+}
+  

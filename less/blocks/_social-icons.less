@@ -1,0 +1,42 @@
+.social-icons-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 0;
+    z-index: 1;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 25px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 30px;
+    }
+}
+
+.social-icons-wrapper.social-icons-wrapper--mb {
+    margin-bottom: 50px;
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+
+    }
+}
+
+.social-icons__link {
+    display: inline-block;
+    margin-right: 25px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    img:hover {
+        opacity: 0.5;
+    }
+}

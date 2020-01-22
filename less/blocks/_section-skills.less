@@ -1,0 +1,140 @@
+.section-skills__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 555px;
+    
+    //Медиа запрос для 480px
+    @media (min-width: 480px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        max-width: unset;
+        margin-left: unset;
+        margin-right: unset;
+        padding-right: 45px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-right: 65px;
+        justify-content: space-between;
+    }
+}
+
+.section-skills__about {
+    max-width: 340px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        max-width: 340px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        max-width: unset;
+    }
+}
+
+.section-skills__contacts-wrapper {
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        max-width: 340px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        max-width: unset;
+    }
+}
+
+.section-skills__heading {
+    margin: 0;
+    margin-bottom: 35px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;    
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 42px;
+        font-size: 40px;
+    }
+}
+
+.section-skills__heading.section-skills__heading--mb {
+    margin-bottom: 25px;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 42px;
+    }
+}
+
+.section-skills__list {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 1.2;
+    
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-left: 33px;
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    li {
+        position: relative;
+        margin-bottom: 20px;
+
+        //Медиа запрос для десктопов
+        @media (min-width: 1200px) {
+            margin-bottom: 15px;
+        }
+
+        &:first-letter {
+            text-transform: uppercase;
+
+            //Медиа запрос для десктопов
+            @media (min-width: 1200px) {
+                text-transform: none;
+            }
+        }      
+    }
+
+    li:last-child {
+        margin-bottom: 0;
+    }
+
+    li::before {
+        //Медиа запрос для десктопов
+        @media (min-width: 1200px) {
+            position: absolute;
+            top: 16px;
+            left: -9px;
+            transform: translateX(-100%);
+            content: "";
+            width: 23px;
+            height: 2px;
+            background-color: #6b6b6b;
+        }
+    }
+}

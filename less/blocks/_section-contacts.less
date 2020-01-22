@@ -1,0 +1,196 @@
+.section-contacts {
+    position: relative;
+    padding: 55px 0 60px;
+    background-color: #f4f8f9;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        padding: 85px 0 90px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding: 150px 0;
+        padding: 145px 0 70px;
+        background-image: url(../img/contacts/contacts-bg.jpg);
+        background-repeat: repeat-y;
+        background-position: center;
+    }
+}
+
+.section-contacts__title-wrapper {
+    margin-bottom: 55px;
+    text-align: center;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 75px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 80px;
+    }
+}
+
+.section-contacts__row {
+    display: flex;
+    flex-direction: column;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.section-contacts__text-wrapper {
+    position: relative;
+    max-width: 555px;
+    z-index: 1;
+    
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        max-width: 339px;
+        margin-right: 32px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-right: 0;
+        max-width: 555px;
+        padding-top: 25px;
+        padding-right: 50px;
+
+        &:after {
+            position: absolute;
+            top: 14px;
+            left: -360px;
+            content: "";
+            width: 455px;
+            height: 295px;
+            background-image: url(../img/contacts/bg-dots.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            z-index: -1;
+        }
+    }    
+}
+
+.section-contacts__text {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 45px;
+        font-size: 20px;
+    }
+}
+
+.section-contacts__list {
+    margin: 0;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 339px;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        max-width: 480px;
+        margin-bottom: 45px;
+    }
+
+    dt {
+        margin: 0;
+        margin-bottom: 5px;
+        width: 165px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+
+        //Медиа запрос для десктопов
+        @media (min-width: 1200px) {
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+
+        &:last-of-type {
+
+        //Медиа запрос для десктопов
+        @media (min-width: 1200px) {
+            margin-bottom: 0;
+        }
+        }
+    }
+
+    dd {
+        margin: 0;
+        margin-bottom: 15px;
+        width: 295px;
+        font-size: 20px;
+        color: rgb(150, 150, 157);
+        line-height: 1.2;
+
+        //Медиа запрос для десктопов
+        @media (min-width: 1200px) {
+            margin-bottom: 0;
+        }
+
+        a {
+            font-family: 'M PLUS 1p', sans-serif;
+            font-size: 18px;            
+            color: rgb(3, 155, 229);
+            line-height: 1.2;
+            text-decoration: none;
+
+            //Медиа запрос для десктопов
+            @media (min-width: 1200px) {
+                font-size: 20px;
+            }
+
+            &:hover {
+                color: #ea655f;
+                border-bottom: 1px solid #ea655f;
+            }
+        }
+          
+    }
+
+}
+
+.section-contacts__form-wrapper {
+    max-width: 555px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-left: 23px;
+        padding-right: 21px;
+    }    
+}
+
+// -------------- inner-page --------------
+.section-contacts.section-contacts--inner-page {
+        //Медиа запрос для десктопов
+        @media (min-width: 1200px) {
+            padding: 150px 0;
+            padding: 145px 0 70px;
+            background-image: url(../img/contacts/contacts-bg-line.jpg);
+            background-repeat: repeat-y;
+            background-position: center;
+        }
+}

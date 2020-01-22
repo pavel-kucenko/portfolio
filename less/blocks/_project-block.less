@@ -1,0 +1,234 @@
+.project-card__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        justify-content: space-between;
+    }
+}
+
+.project-card {
+    width: 555px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:nth-child(n+6) {
+        display: none;
+    }
+
+    &:hover > .project-card__text > .project-card__title-link {
+        color: #ed574f;
+        text-decoration: underline;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        width: 339px;
+        margin-left: unset;
+        margin-right: unset;
+        margin-right: 30px;
+
+        &:nth-child(n+5) {
+            display: none;
+        }
+    }
+
+    //Медиа запрос для 1000px
+    @media (min-width: 1000px) {
+        width: 455px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        justify-content: space-between;
+        margin-right: 0;
+        width: 555px;
+        margin-bottom: 55px;
+
+        &:nth-child(n+5) {
+            display: block;
+        }
+    }
+}
+
+.project-card.project-card--small {    
+    
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 0;
+        width: 360px;
+    }
+}
+
+.project-card.project-card--small.project-card--small--inner-page {
+    margin-bottom: 40px;
+}
+
+.project-card__img-link {
+    display: block;
+    margin-bottom: 20px;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+    margin-bottom: 25px;
+    }
+}
+
+.project-card__img-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        
+    }
+
+    //Медиа запрос для десктопов и выше
+    @media (min-width: 1200px) {
+        margin-bottom: 30px;
+    }
+
+    &:hover .project-card__img-overlay {
+        opacity: 1; /* Показываем подменю при ховере */
+        visibility: visible;
+    }
+
+    &:hover .project-card__img-overlay-link {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+}
+
+.project-card__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-card__img-overlay {   
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background-color: rgba(245, 221, 99, 0.85);
+    opacity: 0; /* По умолчанию скрываем подменю */
+    visibility: hidden;
+    transition-property: opacity, visibility; /* Важно чтобы transition применялось к обоим свойствам */
+    transition-duration: 0.5s; /* Добавляем анимацию 0.5 сек. */
+    transition-delay: 0.15s; /* Добавляем задержку в 0.15 сек. */
+}
+
+.project-card__img-overlay-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 200px;
+    height: 46px;
+    border-radius: 23px;
+    font-size: 16px;
+    background-color: #fff;
+    font-weight: 800;
+    color: #ea736d;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s linear;
+
+    //Медиа запрос для десктопов и выше
+    @media (min-width: 1200px) {
+        width: 254px;
+        height: 52px;
+        border-radius: 26px;
+        font-size: 22px;
+    }
+
+    &:hover {
+        background-color: #ea736d;
+        color: #fff;
+    }
+
+    &:active {
+        background-color: #d4423b;
+        color: #fff;
+    }
+}
+
+.project-card__img-overlay-link.project-card__img-overlay-link-small {
+    width: 200px;
+    height: 46px;
+    border-radius: 23px;
+    font-size: 16px;
+}
+
+.project-card__title-link {
+    display: block;
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.1s;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 32px;
+    }
+
+    &:hover {
+        color: #ed574f;
+        text-decoration: underline;
+    }
+}
+
+.project-card__title-link.project-card__title-link--small {
+    
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 26px;
+    }
+}
+
+.project-card__subtitle {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #868989;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 22px;
+    }
+}
+
+.project-card__subtitle.project-card__subtitle--small {
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 20px;
+    }
+}
+
+  

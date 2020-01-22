@@ -1,0 +1,341 @@
+.header {
+    position: relative;
+    padding: 30px 0 95px;
+    overflow: hidden;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {        
+        padding: 30px 0 85px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        position: relative;
+        padding: 70px 0 238px;
+        background-image: url(../img/header/bg-line.jpg);
+        background-repeat: repeat-y;
+        background-position: center;
+    }
+}
+
+.header__content {
+    position: relative;
+    z-index: 2;
+}
+
+.header__content-about {
+    display: flex;
+    flex-direction: column-reverse; 
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        align-items: center;
+    }
+}
+
+.header__text-wrapper {
+
+    //Медиа запрос для 480px
+    @media (min-width: 480px) {
+        max-width: 555px;
+        margin-left: auto;
+        margin-right: auto;    
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-left: unset;
+        margin-right: unset;    
+        width: 340px;
+        padding-top: 15px;
+        text-align: left;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-top: 0;
+        width: 585px;
+    }
+}
+
+.header__title-wrapper {
+    max-width: 290px;
+    margin-bottom: 35px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        max-width: unset;
+        text-align: left;
+    }
+}
+
+.header__title {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;      
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    span::after {
+        position: absolute;
+        bottom: 5px;
+        left: -5px;
+        transform: translateY(-50%);
+        content: "";
+        width: calc(~'100% + 10px');
+        background-color: rgb(251, 220, 77);
+        height: 10px;
+        z-index: -1;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 52px;
+        span::after {
+            position: absolute;
+            bottom: 8px;
+            left: -5px;
+            transform: translateY(-50%);
+            content: "";
+            width: calc(~'100% + 10px');
+            background-color: rgb(251, 220, 77);
+            height: 10px;
+            z-index: -1;
+        }
+    }      
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin: 0;
+        font-size: 90px;
+        font-weight: 800;
+        line-height: 1.2;
+
+        span::after {
+            position: absolute;
+            bottom: 20px;
+            left: -5px;
+            transform: translateY(-50%);
+            content: "";
+            width: calc(~'100% + 10px');
+            background-color: rgb(251, 220, 77);
+            height: 10px;
+            z-index: -1;
+        }
+    }
+}
+
+.header__text {
+    font-size: 18px;
+    color: rgb(57, 63, 71);
+    line-height: 1.667;      
+
+    p {
+        margin: 0;
+
+        //Медиа запрос для десктопов
+        @media (min-width: 1200px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        width: 340px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        min-width: 490px;
+        font-size: 24px;
+        line-height: 1.5;
+    }
+}
+
+.header__buttons-wrapper {
+    display: none;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: block;
+    }
+}
+ 
+.header__photo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 55px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+        padding: 0 24px;
+        max-height: 291px;
+        max-width: 340px;
+
+        &::after {
+            position: absolute;
+            top: 24px;
+            left: 50px;
+            content: "";
+            width: 500px;
+            height: 340px;
+            background-image: linear-gradient( 90deg, rgb(244,248,249) 0%, rgba(244,248,249,0) 100%);
+            opacity: 0.502;
+            z-index: -1;
+        }            
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-right: 0;
+        max-height: unset;
+        max-width: unset;
+        padding: 0;
+
+        &::after {
+            position: absolute;
+            top: 130px;
+            left: 125px;
+            content: "";
+            width: 500px;
+            height: 410px;
+            background-image: linear-gradient( 90deg, rgb(244,248,249) 0%, rgba(244,248,249,0) 100%);
+            opacity: 0.502;
+            z-index: -1;
+        } 
+    }
+      
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.header__img-wrapper {
+    position: relative;
+    z-index: 1;
+    height: 300px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        height: auto;
+        margin-top: -30px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-top: -155px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1600px;
+        height: 843px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+// ------------------- inner-page -------------------
+.header--inner-page {
+    padding: 70px 0 105px;
+    background-image: none;
+}
+
+.header--inner-page.header--inner-page--contacts {
+    background-color: #f4f8f9;
+    padding: 70px 0 105px;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        background-image: url(../img/contacts/contacts-bg-line.jpg);
+        background-repeat: repeat-y;
+        background-position: center;
+    }
+}
+
+// ------------------- inner-page-project -------------------
+.header--inner-page-project {
+    padding-bottom: 29px;
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        padding-bottom: 33px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-bottom: 75px;
+    }
+}
+
+.header__content-project-title {
+    margin: 0;
+    margin-bottom: 30px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+
+    .underline::after {
+        display: none;
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    span::after {
+        position: absolute;
+        bottom: 0;
+        left: -5px;
+        transform: translateY(-50%);
+        content: "";
+        width: calc(~'100% + 10px');
+        background-color: rgb(251, 220, 77);
+        height: 10px;
+        z-index: -1;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 45px; 
+
+        .underline::after {
+            display: block;
+        }
+    
+        span::after {
+            bottom: 2px;           
+        }
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+
+        span::after {
+            bottom: 1px;
+        }
+    }
+}

@@ -1,0 +1,188 @@
+.stage-work__row {
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        width: 708px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 1006px;
+    }
+}
+
+.stage-work__block {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        flex-direction: row;
+        text-align: right;
+        justify-content: flex-start;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            text-align: left;
+        }
+    }
+
+}
+
+.stage-work__block-text {
+    padding-bottom: 65px;
+    max-width: 285px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        padding-top: 22px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        max-width: 425px;
+        padding-bottom: 75px;        
+
+        &:hover > .stage-work__block-title span::after {
+            background-color: #ea736d;
+        }
+    }
+}
+
+.stage-work__block-title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 26px;
+        margin-bottom: 14px;
+
+        span {
+            position: relative;
+            z-index: 1;            
+        }
+    
+        span::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(-50%);
+            content: "";
+            width: 100%;
+            background-color: rgb(251, 220, 77);
+            height: 7px;
+            z-index: -1;
+            transition: background-color 0.2s ease-in;
+        }
+
+    }
+}
+
+.stage-work__block-about {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+}
+
+.stage-work__block-time {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.stage-work__block-img-col {
+    position: relative;
+    margin-right: 26px;
+
+    &::after {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);       
+        content: "";
+        width: 4px;
+        height: calc(~'100% - 114px');
+        border-radius: 2px;
+        background-color: rgb(225, 238, 244);
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-left: 41px;
+        margin-right: 41px;
+    }
+    
+}
+
+.stage-work__block-img-col.stage-work__block-img-col--before {
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        &::before {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translate(-50%, -100%);       
+            content: "";
+            width: 4px;
+            height: 57px;
+            border-radius: 2px;
+            background-color: rgb(225, 238, 244);
+        }
+    }
+}
+
+.stage-work__block-img-col.stage-work__block-img-col--after {
+
+    &::after {
+        display: none;
+    }
+}
+
+.stage-work__block-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 74px;
+    height: 74px;
+    border-radius: 28px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 35px 0px rgba(0, 112, 187, 0.35);
+}

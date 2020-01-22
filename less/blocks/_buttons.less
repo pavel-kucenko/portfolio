@@ -1,0 +1,44 @@
+.button-link {
+    display: none;
+    
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: inline-block;
+        margin-right: 20px;
+        padding: 15px 40px;
+        background-color: rgb(251, 220, 77);
+        border-radius: 30px;
+        font-size: 22px;
+        font-family: 'M PLUS 1p', sans-serif;
+        font-weight: 700;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        transition: 0.2s;
+        
+        &:hover {
+            background-color: #ffd200;
+        }
+
+        &:active {
+            background-color: #e1bc10;
+        }
+}
+}
+
+.button-link.button-link--bgc {
+    padding: 11px 36px;
+    color: #464646;
+    background-color: #fff;
+    border: 4px solid rgb(70, 70, 70);
+    transition: 0.2s;
+
+    &:hover {
+        color: #a3a3a3;
+        border-color: #797979;
+    }
+
+    &:active {
+        color: #2b2b2b;
+        border-color: #2b2b2b;
+    }
+}

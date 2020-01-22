@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #000000;
+}
+
+a::selection, p::selection, h1::selection, h2::selection, h3::selection, span::selection, li::selection, li::selection, dd::selection, dt::selection, label::selection  {
+    background: #fbdc4d;
+}
+.body--overlay {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 320px;
+    bottom: 0;
+    z-index: 8;
+    transition: background-color 0.5s;
+    background-color: rgba(44, 52, 73, 0.75);  
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        display: none;
+    }   
+}
+
+.none {
+    display: none;
+}
+
+.container {    
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+
+}
+
+.title {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 64px;
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    span::after {
+        
+        position: absolute;
+        bottom: 3px;
+        left: -5px;
+        transform: translateY(-50%);
+        content: "";
+        width: calc(~'100% + 10px');
+        background-color: rgb(251, 220, 77);
+        height: 10px;
+        z-index: -1;
+
+        //Медиа запрос для планшетов и выше
+        @media (min-width: 768px) {
+            bottom: 7px;
+        }
+
+        //Медиа запрос для десктопов
+        @media (min-width: 1200px) {
+            bottom: 10px;
+        }
+    }
+}
+
+.title.title--small {
+    font-size: 35px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 338px) {
+        font-size: 38px;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 64px;
+    }
+}
+
+.mail-link {
+    font-size: 18px;
+    font-family: 'M PLUS 1p', sans-serif;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.2s;
+
+    &:hover {
+        color: #039be5;
+        border-bottom: 1px solid #039be5;
+    }
+
+    &:active {
+        color: #ea655f;
+        border-bottom: 1px solid #ea655f;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 20px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 24px;
+    }
+}
