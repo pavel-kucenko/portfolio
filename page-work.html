@@ -7,8 +7,7 @@
     <title>Павел Куценко Web - разработчик</title>
     <link rel="stylesheet" href="./css/main.css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:100,300,400,500,700,800,900&display=swap&subset=cyrillic-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
-    <link rel="stylesheet" href="./font-awesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap&subset=cyrillic-ext" rel="stylesheet">    
 </head>
 <body>
     <div id="body-overlay"></div>
@@ -76,13 +75,13 @@
                 </div>
 
                 <div class="section-portfolio__filter">
-                    <a href="#" class="section-portfolio__filter-link section-portfolio__filter-link--active">Все работы</a>
-                    <a href="#" class="section-portfolio__filter-link">Bootstrap</a>
-                    <a href="#" class="section-portfolio__filter-link">WordPress</a>
-                    <a href="#" class="section-portfolio__filter-link">Frontend</a>
+                    <a href="#" class="section-portfolio__filter-link section-portfolio__filter-link--active filter" data-filter="all">Все работы</a>
+                    <a href="#" class="section-portfolio__filter-link filter" data-filter=".bs">Bootstrap</a>
+                    <a href="#" class="section-portfolio__filter-link filter" data-filter=".wp">WordPress</a>
+                    <a href="#" class="section-portfolio__filter-link filter" data-filter=".front">Frontend</a>
                 </div>
 
-                <div class="project-card__row">
+                <div class="project-card__row filter-projects">
 
                     <div class="project-card">
 
@@ -112,7 +111,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card project-card--small project-card--small--inner-page">
+                    <div class="project-card project-card--small project-card--small--inner-page mix bs">
                         <div class="project-card__img-wrapper">
                             <img class="project-card__img" src="./img/portfolio/img-03.jpg" alt="project-photo">
                             <div class="project-card__img-overlay">
@@ -125,7 +124,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card project-card--small project-card--small--inner-page">
+                    <div class="project-card project-card--small project-card--small--inner-page mix front">
                         <div class="project-card__img-wrapper">
                             <img class="project-card__img" src="./img/portfolio/img-04.jpg" alt="project-photo">
                             <div class="project-card__img-overlay">
@@ -138,7 +137,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card project-card--small project-card--small--inner-page">
+                    <div class="project-card project-card--small project-card--small--inner-page mix bs">
                         <div class="project-card__img-wrapper">
                             <img class="project-card__img" src="./img/portfolio/img-05.jpg" alt="project-photo">
                             <div class="project-card__img-overlay">
@@ -151,7 +150,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card project-card--small project-card--small--inner-page">
+                    <div class="project-card project-card--small project-card--small--inner-page mix front">
                         <div class="project-card__img-wrapper">
                             <img class="project-card__img" src="./img/portfolio/img-03.jpg" alt="project-photo">
                             <div class="project-card__img-overlay">
@@ -164,7 +163,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card project-card--small project-card--small--inner-page">
+                    <div class="project-card project-card--small project-card--small--inner-page mix bs">
                         <div class="project-card__img-wrapper">
                             <img class="project-card__img" src="./img/portfolio/img-04.jpg" alt="project-photo">
                             <div class="project-card__img-overlay">
@@ -177,7 +176,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card project-card--small project-card--small--inner-page">
+                    <div class="project-card project-card--small project-card--small--inner-page mix front">
                         <div class="project-card__img-wrapper">
                             <img class="project-card__img" src="./img/portfolio/img-05.jpg" alt="project-photo">
                             <div class="project-card__img-overlay">
@@ -190,7 +189,7 @@
                         </div>
                     </div>  
 
-                    <div class="project-card project-card--small">
+                    <div class="project-card project-card--small mix wp">
                         <div class="project-card__img-wrapper">
                             <img class="project-card__img" src="./img/portfolio/img-03.jpg" alt="project-photo">
                             <div class="project-card__img-overlay">
@@ -203,7 +202,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card project-card--small">
+                    <div class="project-card project-card--small mix bs">
                         <div class="project-card__img-wrapper">
                             <img class="project-card__img" src="./img/portfolio/img-04.jpg" alt="project-photo">
                             <div class="project-card__img-overlay">
@@ -216,7 +215,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card project-card--small">
+                    <div class="project-card project-card--small mix wp">
                         <div class="project-card__img-wrapper">
                             <img class="project-card__img" src="./img/portfolio/img-05.jpg" alt="project-photo">
                             <div class="project-card__img-overlay">
@@ -257,7 +256,10 @@
         </div>
     </footer>
     <!-- //footer -->
-
+    <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+    <script src="./libs/mixitup2/jquery.mixitup.min.js"></script>
+    <script src="https://kit.fontawesome.com/9b72afda33.js"></script>
     <script src="./js/main.js"></script>
+
 </body>
 </html>

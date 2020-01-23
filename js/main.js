@@ -13,3 +13,6 @@ menuOverlay.onclick = function () {
     mobileNavContainer.classList.toggle('nav__mobile-nav--active');
     menuOverlay.classList.toggle('body--overlay');
 }
+
+//-filter
+$('.filter-projects').mixItUp();
