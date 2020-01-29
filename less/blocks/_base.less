@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     position: relative;
@@ -12,6 +16,7 @@ body {
 a::selection, p::selection, h1::selection, h2::selection, h3::selection, span::selection, li::selection, li::selection, dd::selection, dt::selection, label::selection  {
     background: #fbdc4d;
 }
+
 .body--overlay {
     position: absolute;
     content: "";
@@ -28,6 +33,12 @@ a::selection, p::selection, h1::selection, h2::selection, h3::selection, span::s
         display: none;
     }   
 }
+
+.error {
+    color: red;
+    font-size: 10px;
+}
+
 .mix {
     display: none;
 }

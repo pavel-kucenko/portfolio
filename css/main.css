@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   position: relative;
@@ -35,6 +38,10 @@ label::selection {
   .body--overlay {
     display: none;
   }
+}
+.error {
+  color: red;
+  font-size: 10px;
 }
 .mix {
   display: none;
@@ -1715,14 +1722,6 @@ label::selection {
 .input:focus {
   border-color: #ea736d;
 }
-.input:focus + .fake-placeholder,
-.input:valid + .fake-placeholder {
-  top: -20px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #ed9626;
-}
 .fake-placeholder {
   position: absolute;
   top: 10px;
@@ -1750,8 +1749,7 @@ label::selection {
 .textarea:focus {
   border-color: #ea736d;
 }
-.textarea:focus + .fake-placeholder,
-.textarea:valid + .fake-placeholder {
+.fake-placeholder.active {
   top: -20px;
   font-size: 16px;
   font-weight: 700;
@@ -1790,6 +1788,74 @@ label::selection {
 @media (min-width: 1200px) {
   .submit {
     font-size: 22px;
+  }
+}
+#answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.contact-form__success {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #0074ff;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .contact-form__success {
+    padding: 40px 60px;
+  }
+}
+@media (min-width: 992px) {
+  .contact-form__success {
+    padding: 50px 100px;
+  }
+}
+#answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.contact-form__success {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #0074ff;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .contact-form__success {
+    padding: 40px 60px;
+  }
+}
+@media (min-width: 992px) {
+  .contact-form__success {
+    padding: 50px 100px;
   }
 }
 .footer {
@@ -2271,3 +2337,4 @@ label::selection {
     display: flex;
   }
 }
+/*# sourceMappingURL=main.css.map */

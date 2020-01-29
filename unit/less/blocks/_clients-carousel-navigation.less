@@ -1,0 +1,74 @@
+.testimonial-carousel.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    margin-left: -20px;
+    transform: translate(-100%, 100%);
+    width: 52px;
+    height: 52px;
+    background-image: url('../img/section-clients/carousel-icons/button_left.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        top: 10px;
+        bottom: auto;
+        left: 0;     
+        margin-right: 0;  
+        transform: unset; 
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        left: -40px;
+        transform: translateX(-100%);
+    }
+}
+
+.testimonial-carousel.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    margin-left: 20px;
+    transform: translateY(100%,);
+    width: 52px;
+    height: 52px;
+    background-image: url('../img/section-clients/carousel-icons/button_right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        top: 10px;
+        bottom: auto;
+        left: auto;
+        right: 0;     
+        margin-left: 0;  
+        transform: unset; 
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        right: -40px;
+        transform: translateX(100%);
+    }
+}

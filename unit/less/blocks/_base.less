@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        width: 738px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+}
+
+.column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}  
+
+.relative {
+    position: relative;
+}
+
+.none {
+    display: none;
+}
+
+.section-title {
+    margin: 0;
+    color: #50e3a4;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
+}
+
+.section-title.section-title--white {
+    color: #fff;
+}
+
+.section-title.section-title--small {
+    font-size: 14px;
+
+}
+
+.section-title.section-title--large {
+    font-size: 16px;
+
+    @media (min-width: 1200px) {
+        font-size: 14px;
+    }
+}
+
+.section-header {
+    margin: 0;
+    color: #2e2e2e;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        font-size: 42px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        font-size: 48px;
+    }
+}
+
+.section-header.section-header--white {
+    color: #fff;
+}
+
+.section-column-text {
+    margin-bottom: 50px;
+    text-align: center;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+        padding-top: 20px;
+        width: 380px;
+        text-align: left;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-top: 0;
+        width: 50%;
+        padding-left: 95px;
+        padding-right: 25px;
+    }
+}
+
+.section-column-text.section-column-text--pb {
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-bottom: 130px;
+    }
+}
+
+.section-content-title {
+    margin-bottom: 35px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 45px;
+    }
+}
+
+.section-content-header {
+    margin-bottom: 40px;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+}
+
+.section-content-text {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-content-text p {
+    margin: 0;
+    color: #808080;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        line-height: 2.14;
+    }
+}
+

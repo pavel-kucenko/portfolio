@@ -1,0 +1,76 @@
+.section-cta {
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 75px;
+    background-color: #0a824e;
+    background-image: url("../img/cta/bgi-cta.jpg");   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        padding-bottom: 80px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        padding-top: 85px;
+        padding-bottom: 90px;
+    }
+
+    &::before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 130, 78, 0.7);
+    }
+}
+
+.section-cta__content {
+    position: relative;
+    text-align: center;
+}
+
+.cta-title {
+    margin: 0;
+    margin-bottom: 35px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.36;
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        margin-bottom: 45px;
+    }
+}
+
+.strong-word {
+    font-weight: 700;
+    letter-spacing: 2.2px;
+}
+
+.cta-button {
+    height: 60px;
+    padding: 0 45px;
+    border: none;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #2bb279;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover, &:focus {
+        outline: none;
+        background-color: darken(#fff, 10%);
+    }
+}

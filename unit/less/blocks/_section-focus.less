@@ -1,0 +1,114 @@
+.section-focus {
+    position: relative;
+    padding: 70px 0 45px;
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        content: "";
+        width: 68px;
+        height: 68px;
+        background-color: #a4eecb;
+    } 
+    
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        padding: 60px 0 0;
+
+        &::before {
+        display: none;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        &::before {
+            display: block;            
+            position: absolute;
+            top: 36%;
+            left: auto;
+            right: -60px;
+            content: "";
+            width: 120px;
+            height: 120px;
+            background-color: #a4eecb;
+            transform: rotate(45deg);
+        }
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1400px) {
+        &::before {
+            display: block;            
+            position: absolute;
+            top: 31%;
+            left: auto;
+            right: -93.5px;
+            content: "";
+            width: 187px;
+            height: 187px;
+            background-color: #a4eecb;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.section-focus__content {
+    display: flex;
+    flex-direction: column-reverse;
+   
+
+    //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.section-focus__content-wrapper-img {
+    
+        //Медиа запрос для планшетов и выше
+    @media (min-width: 768px) {
+        position: relative;
+        width: 50%;
+        height: 518px;
+    }
+
+    //Медиа запрос для десктопов
+    @media (min-width: 1200px) {
+
+        height: 782px;    
+    }
+}
+
+.section-focus__content-img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        //Медиа запрос для планшетов и выше
+        @media (min-width: 768px) {
+            width: auto;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 70px;
+
+        }
+
+        //Медиа запрос для десктопов
+        @media (min-width: 1200px) {
+            height: auto;
+            position: absolute;
+            top: 0;
+            right: 120px;
+        }
+
+}
